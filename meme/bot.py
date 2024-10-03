@@ -470,7 +470,7 @@ async def main():
 
         print("=== [ SEMUA AKUN TELAH DI PROSES ] ===")
     
-        animate_energy_recharge(15)   
+        animate_energy_recharge(2)   
         
   
 def animate_energy_recharge(duration):
