@@ -1,0 +1,1 @@
+user=%7B%22id%22%3A6770501151%2C%22first_name%22%3A%22Dr%20Xaibi%206%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22Dr_Xaibi6%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-7538303773978975425&chat_type=sender&auth_date=1727958705&hash=5908447300322c94e38eb69c0a9b66b55085ee40dad2c6a0476061c2c59ce83a
