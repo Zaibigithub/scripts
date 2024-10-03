@@ -1,0 +1,1 @@
+query_id=AAEfpo0TAwAAAB-mjRMfsFLb&user=%7B%22id%22%3A6770501151%2C%22first_name%22%3A%22Dr%20Xaibi%206%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22Dr_Xaibi6%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1727957888&hash=54c5200c8d91396f4d7b7a8d763d45dce25d36ace9ec84f86b70f2c33ae55ec2
