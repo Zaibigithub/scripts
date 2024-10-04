@@ -150,7 +150,7 @@ async def activate_energy_recharge_booster(index,headers):
 async def activate_booster(index, headers):
     access_token = await fetch(index + 1)
     url = "https://api-gw-tg.memefi.club/graphql"
-    print("\r🚀 Mengaktifkan Turbo Boost ... ", end="", flush=True)
+    print("\033[93m\r🚀 Mengaktifkan Turbo Boost ...\033[0m", end="", flush=True)
 
     headers = headers_set.copy()  # Membuat salinan headers_set agar tidak mengubah variabel global
     headers['Authorization'] = f'Bearer {access_token}'
@@ -166,7 +166,7 @@ async def activate_booster(index, headers):
                 response_data = await response.json()
                 current_health = response_data['data']['telegramGameActivateBooster']['currentBoss']['currentHealth']
                 if current_health == 0:
-                    print("\nBos telah dikalahkan, mengatur bos berikutnya...")
+                    print("\033[96m\nBos telah dikalahkan, mengatur bos berikutnya...\033[0m")
                     await set_next_boss(index, headers)
                 else:
                     if god_mode == 'y':
@@ -189,7 +189,7 @@ async def activate_booster(index, headers):
                             if 'data' in tap_result and 'telegramGameProcessTapsBatch' in tap_result['data']:
                                 tap_data = tap_result['data']['telegramGameProcessTapsBatch']
                                 if tap_data['currentBoss']['currentHealth'] == 0:
-                                    print("\nBos telah dikalahkan, mengatur bos berikutnya...")
+                                    print("\033[96m\nBos telah dikalahkan, mengatur bos berikutnya...\033[0m")
                                     await set_next_boss(index, headers)
                                     print(f"\rTapped ✅ Coin: {tap_data['coinsAmount']}, Monster ⚔️: {tap_data['currentBoss']['currentHealth']} - {tap_data['currentBoss']['maxHealth']}    ")
                         else:
@@ -228,7 +228,7 @@ async def set_next_boss(index, headers):
     async with aiohttp.ClientSession() as session:
         async with session.post(url, headers=headers, json=boss_payload) as response:
             if response.status == 200:
-                print("✅ Berhasil ganti bos.", flush=True)
+                print("\033[95m✅ Berhasil ganti bos.\033[0m", flush=True)
             else:
                 print("❌ Gagal ganti bos.", flush=True)
                  # Mengembalikan respons error
